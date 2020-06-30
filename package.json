@@ -1,0 +1,69 @@
+{
+  "name": "chisel-tunnel",
+  "version": "1.6.0",
+  "description": "Download releases of jpillora/chisel, a tool to create tcp-tunnels.",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "src/**/*.js"
+  ],
+  "scripts": {
+    "prepare-versions-and-assets": "node prepare/create-versions-and-assets-lookup.js",
+    "----":  "-----",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "pretest": "npm run lint",
+    "test": "npm run test:jest --",
+    "posttest": "npm run format",
+    "format": "prettier --loglevel warn --write \"**/*.{js,ts,d.ts,css,md}\"",
+    "lint": "eslint . --cache --fix",
+    "thought": "thought run -a",
+    "changelog": "standard-changelog && git add CHANGELOG.md",
+    "version": "npm run changelog && npm run thought"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.7.0",
+    "fs-extra": "^9.0.1",
+    "got": "^11.3.0",
+    "husky": ">=4",
+    "jest": "^26.0.1",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.5",
+    "standard-changelog": "^2.0.24",
+    "thought": "^3.0.0",
+    "thought-plugin-jsdoc": "^2.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "semver": "^7.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,ts,d.ts,css,md}": "prettier --write"
+  },
+  "jest": {
+    "rootDir": ".",
+    "testMatch": [
+      "**/src/**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "repository": "git@github.com:nknapp/node-child-service.git",
+  "author": "Nils Knappmeier <npm@knappi.org>"
+}
