@@ -10,8 +10,7 @@
     "src/**/*.js"
   ],
   "scripts": {
-    "prepare-versions-and-assets": "node prepare/create-versions-and-assets-lookup.js",
-    "----":  "-----",
+    "update-versions-and-assets": "node prepare/create-versions-and-assets-lookup.js",
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -64,6 +63,6 @@
       }
     }
   },
-  "repository": "git@github.com:nknapp/node-child-service.git",
-  "author": "Nils Knappmeier <npm@knappi.org>"
+  "author": "Nils Knappmeier <npm@knappi.org>",
+  "repository": "git@github.com:nknapp/node-chisel-tunnel.git"
 }
