@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel)
 
-> Use jpillora/chisel to create tcp tunnels to your server.
+> Download releases of jpillora/chisel, a tool to create tcp-tunnels.
 
 # Installation
 
@@ -34,6 +34,10 @@ This will generate the following output
 `chisel-tunnel` is published under the MIT-license.
 
 See [LICENSE.md](LICENSE.md) for details.
+
+# Release-Notes
+
+For release notes, see [CHANGELOG.md](CHANGELOG.md)
 
 # Contributing guidelines
 

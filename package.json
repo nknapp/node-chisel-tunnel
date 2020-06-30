@@ -1,6 +1,6 @@
 {
   "name": "chisel-tunnel",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Download releases of jpillora/chisel, a tool to create tcp-tunnels.",
   "main": "src/index.js",
   "types": "types/index.d.ts",
