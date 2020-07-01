@@ -1,4 +1,36 @@
 {
+  "1.6.0": {
+    "linux--ia32": {
+      "name": "chisel_1.6.0_linux_386.gz",
+      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_linux_386.gz",
+      "checksum": "49cf02eb8f76329b62378b8e9b0ae5abbe0312b9f2c3e068dbdf57f9474dfd8c"
+    },
+    "linux--x64": {
+      "name": "chisel_1.6.0_linux_amd64.gz",
+      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_linux_amd64.gz",
+      "checksum": "4a4dbfa07c6f4a72b6727c4a2ed8ef2899f61f724a9b5d142ab30b1c283a6db8"
+    },
+    "win--ia32": {
+      "name": "chisel_1.6.0_windows_386.gz",
+      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_windows_386.gz",
+      "checksum": "c33fcbfbaf33ff5ed81591bbb65211e30e274e0c25b04b41cd8640df384be036"
+    },
+    "win--x64": {
+      "name": "chisel_1.6.0_windows_amd64.gz",
+      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_windows_amd64.gz",
+      "checksum": "165810c8aeb680a18ef0cbe865ebb29ae279976bb70c2bce46c1a7d7c4777e2f"
+    },
+    "darwin--ia32": {
+      "name": "chisel_1.6.0_darwin_386.gz",
+      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_darwin_386.gz",
+      "checksum": "df32f865014710359e52fcf0ba175ad479fec41cde92dc8dc4b7524145121ceb"
+    },
+    "darwin--x64": {
+      "name": "chisel_1.6.0_darwin_amd64.gz",
+      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_darwin_amd64.gz",
+      "checksum": "a2c2db4fb0e2ec86fbdda64d1fdf5a084d036073ffd366c1c56336c4c5c95bf1"
+    }
+  },
   "1.5.2": {
     "linux--ia32": {
       "name": "chisel_1.5.2_linux_386.gz",
@@ -125,38 +157,6 @@
       "name": "chisel_1.4.0_darwin_amd64.gz",
       "url": "https://github.com/jpillora/chisel/releases/download/v1.4.0/chisel_1.4.0_darwin_amd64.gz",
       "checksum": "665593018e2d7938198172532fad4e17c501253b1a75106904d0eb50bf2b8c75"
-    }
-  },
-  "1.6.0": {
-    "linux--ia32": {
-      "name": "chisel_1.6.0_linux_386.gz",
-      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_linux_386.gz",
-      "checksum": "49cf02eb8f76329b62378b8e9b0ae5abbe0312b9f2c3e068dbdf57f9474dfd8c"
-    },
-    "linux--x64": {
-      "name": "chisel_1.6.0_linux_amd64.gz",
-      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_linux_amd64.gz",
-      "checksum": "4a4dbfa07c6f4a72b6727c4a2ed8ef2899f61f724a9b5d142ab30b1c283a6db8"
-    },
-    "win--ia32": {
-      "name": "chisel_1.6.0_windows_386.gz",
-      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_windows_386.gz",
-      "checksum": "c33fcbfbaf33ff5ed81591bbb65211e30e274e0c25b04b41cd8640df384be036"
-    },
-    "win--x64": {
-      "name": "chisel_1.6.0_windows_amd64.gz",
-      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_windows_amd64.gz",
-      "checksum": "165810c8aeb680a18ef0cbe865ebb29ae279976bb70c2bce46c1a7d7c4777e2f"
-    },
-    "darwin--ia32": {
-      "name": "chisel_1.6.0_darwin_386.gz",
-      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_darwin_386.gz",
-      "checksum": "df32f865014710359e52fcf0ba175ad479fec41cde92dc8dc4b7524145121ceb"
-    },
-    "darwin--x64": {
-      "name": "chisel_1.6.0_darwin_amd64.gz",
-      "url": "https://github.com/jpillora/chisel/releases/download/v1.6.0/chisel_1.6.0_darwin_amd64.gz",
-      "checksum": "a2c2db4fb0e2ec86fbdda64d1fdf5a084d036073ffd366c1c56336c4c5c95bf1"
     }
   }
 }

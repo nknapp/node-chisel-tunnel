@@ -1,10 +1,10 @@
 const semver = require("semver");
-const versionsAndAssets = require("../generated/versions-and-assets-lookup.json");
+const versionsAndAssets = require("../generated/asset-lookup.json");
 const availableVersions = Object.keys(versionsAndAssets);
 
-module.exports = { assetLookup };
+module.exports = { lookupAssets };
 
-function assetLookup(semverRange) {
+function lookupAssets(semverRange) {
 	const maxRequestedVersion = semver.maxSatisfying(availableVersions, semverRange);
 	if (maxRequestedVersion == null) {
 		throw new Error("No version found for range " + semverRange);

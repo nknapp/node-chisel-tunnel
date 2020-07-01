@@ -7,10 +7,11 @@
   "license": "MIT",
   "private": false,
   "files": [
-    "src/**/*.js"
+    "src/**/*.js",
+    "src/**/*.json"
   ],
   "scripts": {
-    "update-versions-and-assets": "node prepare/create-versions-and-assets-lookup.js",
+    "create-asset-lookup-file": "node prepare/create-asset-lookup-file.js",
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -31,9 +32,10 @@
     "husky": ">=4",
     "jest": "^26.0.1",
     "lint-staged": ">=10",
+    "nock": "^13.0.2",
     "prettier": "^2.0.5",
     "standard-changelog": "^2.0.24",
-    "thought": "^3.0.0",
+    "thought": "3.0.1",
     "thought-plugin-jsdoc": "^2.0.0"
   },
   "dependencies": {

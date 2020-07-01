@@ -3,12 +3,12 @@ const path = require("path");
 const tmpDir = path.resolve(__dirname, "..", "tmp");
 const { sha256, download, gunzip } = require("./lib/file-operations");
 
-const { assetLookup } = require("./asset-lookup");
+const { lookupAssets } = require("./lib/lookup-assets");
 
 module.exports = { downloadChisel };
 
 async function downloadChisel(semverRange) {
-	const asset = assetLookup(semverRange);
+	const asset = lookupAssets(semverRange);
 	const zippedFileName = path.join(tmpDir, asset.name);
 
 	try {
