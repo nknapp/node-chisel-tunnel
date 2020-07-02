@@ -5,10 +5,12 @@ const { promisify } = require("util");
 const pipeline = promisify(stream.pipeline);
 const got = require("got");
 const zlib = require("zlib");
+const path = require("path");
 
 module.exports = { download, gunzip, sha256 };
 
 async function download(url, targetFile) {
+	await fs.mkdirp(path.dirname(targetFile));
 	return pipeline(got.stream(url), fs.createWriteStream(targetFile));
 }
 
