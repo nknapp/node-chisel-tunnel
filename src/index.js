@@ -8,14 +8,19 @@ const { lookupAssets } = require("./lib/lookup-assets");
 module.exports = { downloadChisel };
 
 /**
- * Download and
- * @param semverRange
- * @param tmpDir
- * @return {Promise<*>}
+ * Download chisel for a given range of versions
+ * @param {string} semverRange
+ * @param {object=} userOptions
+ * @param {string=} userOptions.tmpDir
+ * @return {Promise<string>} the downloaded chisel executable
  */
-async function downloadChisel(semverRange, { tmpDir = defaultTmpDir }) {
+async function downloadChisel(semverRange, userOptions) {
+	const options = {
+		tmpDir: defaultTmpDir,
+		...userOptions,
+	};
 	const asset = lookupAssets(semverRange);
-	const zippedFileName = await downloadAndVerify(asset, tmpDir);
+	const zippedFileName = await downloadAndVerify(asset, options.tmpDir);
 	return await extractFile(zippedFileName);
 }
 
