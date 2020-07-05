@@ -1,6 +1,6 @@
 const fs = require("fs-extra");
 const path = require("path");
-const defaultTmpDir = path.resolve(__dirname, "..", "tmp");
+const defaultCacheDir = path.resolve(__dirname, "..", "chisel-cache");
 const { sha256, download, gunzip } = require("./lib/file-operations");
 
 const { lookupAssets } = require("./lib/lookup-assets");
@@ -10,22 +10,22 @@ module.exports = { downloadChisel };
 /**
  * Download chisel for a given range of versions
  * @param {string} semverRange
- * @param {object=} userOptions
- * @param {string=} userOptions.tmpDir
+ * @param {object=} options
+ * @param {string=} options.cacheDir
  * @return {Promise<string>} the downloaded chisel executable
  */
-async function downloadChisel(semverRange, userOptions) {
-	const options = {
-		tmpDir: defaultTmpDir,
-		...userOptions,
+async function downloadChisel(semverRange, options) {
+	const optionsWithDefaults = {
+		cacheDir: defaultCacheDir,
+		...options,
 	};
 	const asset = lookupAssets(semverRange);
-	const zippedFileName = await downloadAndVerify(asset, options.tmpDir);
+	const zippedFileName = await downloadToCacheAndVerify(asset, optionsWithDefaults.cacheDir);
 	return await extractFile(zippedFileName);
 }
 
-async function downloadAndVerify(asset, tmpDir) {
-	const zippedFileName = path.join(tmpDir, asset.name);
+async function downloadToCacheAndVerify(asset, cacheDir) {
+	const zippedFileName = path.join(cacheDir, asset.name);
 	if (await needToDownload(zippedFileName, asset.checksum)) {
 		await download(asset.url, zippedFileName);
 	}

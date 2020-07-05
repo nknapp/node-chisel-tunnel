@@ -4,3 +4,5 @@ coverage/
 .eslintcache
 /node_modules
 /tmp
+/testtmp
+/test/fixtures/chisel/1.5.2/

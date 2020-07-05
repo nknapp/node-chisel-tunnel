@@ -1,4 +1,4 @@
-module.exports = { uniqueIndexBy, mapValues, arrayToObject };
+module.exports = { uniqueIndexBy, arrayToObject };
 
 function uniqueIndexBy(array, keyFunction) {
 	const result = {};
@@ -8,14 +8,6 @@ function uniqueIndexBy(array, keyFunction) {
 			throw new Error(`Duplicate key: ${key}`);
 		}
 		result[key] = item;
-	});
-	return result;
-}
-
-function mapValues(object, mapValueFunction) {
-	const result = {};
-	Object.keys(object).forEach((key) => {
-		result[key] = mapValueFunction(object[key]);
 	});
 	return result;
 }
