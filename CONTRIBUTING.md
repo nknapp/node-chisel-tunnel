@@ -4,50 +4,79 @@
 
 ### Submitting security issues
 
-If you need to submit a security issue, please do NOT open an issue. Security issues should not be discussed in public.
+If you need to submit a security issue, please do NOT open an issue.
+Security issues should not be discussed in public.
 
-Please use the [form to submit security issue](https://www.npmjs.com/advisories/report?package=chisel-tunnel) instead, or write a mail to [security@npmjs.com](mailto:security@npmjs.com?subject=Security+issue+in+"chisel-tunnel").
+Please use the
+[form to submit security issue](https://www.npmjs.com/advisories/report?package=chisel-tunnel)
+instead, or write a mail to
+[security@npmjs.com](mailto:security@npmjs.com?subject=Security+issue+in+"chisel-tunnel").
 
 ### Submitting ideas, bug
 
-If you have feature requests, bugs or simply want to say thanks, you can open issue.
+If you have feature requests, bugs or simply want to say thanks, you
+can open issue.
 
 Please verify that
 
 - you are using the latest version of "chisel-tunnel",
-- that the issue has not already been opened (otherwise use the emojis to add a +1)
+- that the issue has not already been opened (otherwise use the emojis
+  to add a +1)
 
 Please try to be precise in your description.
 
 - **Bugs**: Please provide small example that reproduces the bug.
-- **Feature requests**: Please describe what you want to achieve and why it is not easily solvable with the current version.
+- **Feature requests**: Please describe what you want to achieve and
+  why it is not easily solvable with the current version.
 
 ### Reviewing code
 
-I am trying to write code that other people can understand. You are very welcome to review the code in this project and report any places that you find difficult to understand. Please open an issue or, if you feel more comfortable with that, write me an [e-mail](https://github.com/nknapp). Please include any suggestions that you have for improving the code.
+I am trying to write code that other people can understand. You are
+very welcome to review the code in this project and report any places
+that you find difficult to understand. Please open an issue or, if you
+feel more comfortable with that, write me an
+[e-mail](https://github.com/nknapp). Please include any suggestions
+that you have for improving the code.
 
-I may not change the particular piece of code, but I am always curious on what other people think.
+I may not change the particular piece of code, but I am always curious
+on what other people think.
 
 ### Pull requests
 
-You can always submit PRs instead of issues, if you like. But keep in mind that it might not get accepted. Before spending a lot of time into a PR, please open an issue first.
+You can always submit PRs instead of issues, if you like. But keep in
+mind that it might not get accepted. Before spending a lot of time
+into a PR, please open an issue first.
 
-You can open PRs as a base for discussions. In the beginning the code does not have to be perfect. Have a look below to see code-style issues that should be resolved before a PR gets merged.
+You can open PRs as a base for discussions. In the beginning the code
+does not have to be perfect. Have a look below to see code-style
+issues that should be resolved before a PR gets merged.
 
 ## Coding-Guidelines
 
 Your code should comply to following rules before it gets merged:
 
-- Formatting is done via [prettier](https://npmjs.com/package/prettier). You do not need the take care of it, `prettier` is configured to run before committing
-- Please make sure that the [eslint](https://npmjs.com/package/eslint) does not report any errors or warnings.
+- Formatting is done via
+  [prettier](https://npmjs.com/package/prettier). You do not need the
+  take care of it, `prettier` is configured to run before committing
+- Please make sure that the [eslint](https://npmjs.com/package/eslint)
+  does not report any errors or warnings.
 - **Variables** and **functions** should have descriptive names.
-- **Functions** should be short and named after what they do. If your function is longer than a couple of lines (commands), extract sub-functions, even if they are called only from a single place.
-- **Extracted functions** should be placed **below** the calling function. If someone reads the file from the top to the bottom, he should first read about the high-level concepts of the file, and _then_ about the details.
-- Tests are placed in files next to the tested file. Utilities that are used for multiple tests shoudl be placed in the `test-utils`-folder.
+- **Functions** should be short and named after what they do. If your
+  function is longer than a couple of lines (commands), extract
+  sub-functions, even if they are called only from a single place.
+- **Extracted functions** should be placed **below** the calling
+  function. If someone reads the file from the top to the bottom, he
+  should first read about the high-level concepts of the file, and
+  _then_ about the details.
+- Tests are placed in files next to the tested file. Utilities that
+  are used for multiple tests shoudl be placed in the
+  `test-utils`-folder.
 
 ## Commit style
 
-Please format your commit message according to the [Angular Convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/README.md#angular-convention), without the "scope".
+Please format your commit message according to the
+[Angular Convention](https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-angular/README.md#angular-convention),
+without the "scope".
 
 Example:
 
@@ -57,15 +86,21 @@ chore: drop support for Node.js 8 and 9
 BREAKING CHANGE: Node.js version prior to 10 will not be supported anymore.
 ```
 
-The changelog is generated by [standard-changelog](https://npmjs.com/package/standard-changelog) and requires the given commit format to work properly.
+The changelog is generated by
+[standard-changelog](https://npmjs.com/package/standard-changelog) and
+requires the given commit format to work properly.
 
 ## Documentation
 
-Documentation-files (such as this one are generated by [thought](https://npmjs.com/package/thought)). Please edit the source files in the `.thought`-directory or refer to the documentation of `thought`, if you want to change contents.
+Documentation-files (such as this one are generated by
+[thought](https://npmjs.com/package/thought)). Please edit the source
+files in the `.thought`-directory or refer to the documentation of
+`thought`, if you want to change contents.
 
 ## Releasing
 
-This project adhers to [semantic-versioning](https://semver.org/). A release can be performed by executing
+This project adhers to [semantic-versioning](https://semver.org/). A
+release can be performed by executing
 
 ```bash
 npm version "$@" || exit 1
@@ -76,24 +111,38 @@ npm publish
 
 ## Donations
 
-If you like this project and if it helps you save money, please consider donating
+If you like this project and if it helps you save money, please
+consider donating
 
-- either at [liberapay](https://de.liberapay.com/nils.knappmeier/) for continuous donations (preferred),
-- or via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GB656ZSAEQEXN&source=url)
+- either at [liberapay](https://de.liberapay.com/nils.knappmeier/) for
+  continuous donations (preferred),
+- or via
+  [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GB656ZSAEQEXN&source=url)
 
-Please note that Liberapay does not deduct payment fees, which makes it my preferred option.
+Please note that Liberapay does not deduct payment fees, which makes
+it my preferred option.
 
 ## Helping out
 
-There are always little things to do, such as updating dependencies and it would be great if I had some help there. If you want to commit yourself to doing that, please write me (issue or email) and I will give you push access.
+There are always little things to do, such as updating dependencies
+and it would be great if I had some help there. If you want to commit
+yourself to doing that, please write me (issue or email) and I will
+give you push access.
 
-Please understand, that I will only give publishing access to the npm-package to people that I know personally or have worked with over a longer period.
+Please understand, that I will only give publishing access to the
+npm-package to people that I know personally or have worked with over
+a longer period.
 
 ## Special tasks
 
 ### Updating the release-list for `chisel`
 
-In order to look-up the download-urls, this package contains a list of releases for chisel (see [src/generated/asset-lookup.json](src/generated/asset-lookup.json)). For each release, the list contains the download-url and checksum of the `chisel`-binary for different platforms (win32, linux, darwin) and architectures (x64, ia32).
+In order to look-up the download-urls, this package contains a list of
+releases for chisel (see
+[src/generated/asset-lookup.json](src/generated/asset-lookup.json)).
+For each release, the list contains the download-url and checksum of
+the `chisel`-binary for different platforms (win32, linux, darwin) and
+architectures (x64, ia32).
 
 This table can be updated by running
 
@@ -101,6 +150,9 @@ This table can be updated by running
 yarn create-asset-lookup-file
 ```
 
-The file is checked in, because the checksums should be part of the project and not loaded from github on-the-fly.
+The file is checked in, because the checksums should be part of the
+project and not loaded from github on-the-fly.
 
-Updating the list lookup-table (and thus making new versions of chisel available) is considered to be a "feature" and results in a MINOR version bump.
+Updating the list lookup-table (and thus making new versions of chisel
+available) is considered to be a "feature" and results in a MINOR
+version bump.
