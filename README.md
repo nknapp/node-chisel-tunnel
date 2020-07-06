@@ -1,6 +1,6 @@
 # chisel-tunnel
 
-[![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel) ![Node.js CI](https://github.com/nknapp/node-chisel-tunnel/workflows/Node.js%20CI/badge.svg)
+[![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel) ![[Node.js CI](https://github.com/nknapp/node-chisel-tunnel/actions?query=workflow%3A%22Node.js+CI%22)](https://github.com/nknapp/node-chisel-tunnel/workflows/Node.js%20CI/badge.svg)
 
 > Download releases of jpillora/chisel, a tool to create tcp-tunnels.
 
