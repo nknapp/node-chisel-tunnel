@@ -51,7 +51,7 @@ chiselTunnel.downloadChisel("~1.5.0").then(filename => {
 This will generate the following output
 
 ```
-1.5.2
+
 ```
 
 # API reference

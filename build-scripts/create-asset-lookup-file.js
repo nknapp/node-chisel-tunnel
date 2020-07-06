@@ -13,4 +13,12 @@ const targetFile = path.resolve(__dirname, "..", "src", "generated", "asset-look
 	const assetsByVersionsAndPlatform = await computeAssetLookup(githubReleases, supportedVersions);
 	await fs.mkdirp(path.dirname(targetFile));
 	await fs.writeFile(targetFile, JSON.stringify(assetsByVersionsAndPlatform, null, 2));
+	console.log(
+		`
+Please commit the file ${targetFile} using the following commit message
+----
+feat: update asset-lookup.json
+-----
+`.trim()
+	);
 })();
