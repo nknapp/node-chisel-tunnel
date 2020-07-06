@@ -10,6 +10,20 @@ on:
     branches: [ master ]
 
 jobs:
+  lint-docs-format:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - run: yarn install
+    - run: yarn check:format
+    - run: yarn check:lint
+    - run: yarn check:docs
+
+
   test:
     runs-on: ${{matrix.os}}
     strategy:
@@ -23,4 +37,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
-    - run: yarn test
+    - run: yarn test:coverage
