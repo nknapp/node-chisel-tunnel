@@ -31,8 +31,7 @@
     "format": "prettier --loglevel warn --write \"**/*.{js,ts,d.ts,css,md}\"",
     "lint": "eslint . --cache --fix",
     "check:format": "prettier --check \"**/*.{js,ts,d.ts,css,md}\"",
-    "check:lint": "eslint . --cache",
-    "check:docs": "thought up-to-date",
+    "check:lint": "eslint . --cache --max-warnings 0",
     "thought": "thought run -a",
     "changelog": "standard-changelog && git add CHANGELOG.md",
     "version": "npm run changelog && npm run thought"

@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  lint-docs-format:
+  lint-format:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -21,8 +21,6 @@ jobs:
     - run: yarn install
     - run: yarn check:format
     - run: yarn check:lint
-    - run: yarn check:docs
-
 
   test:
     runs-on: ${{matrix.os}}
