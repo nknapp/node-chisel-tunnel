@@ -49,9 +49,9 @@ function getChisel_1_5_2_executable() {
 			"https://github.com/jpillora/chisel/releases/download/v1.5.2/chisel_1.5.2_darwin_386.gz",
 		"darwin--x64":
 			"https://github.com/jpillora/chisel/releases/download/v1.5.2/chisel_1.5.2_darwin_amd64.gz",
-		"win32-ia32":
+		"win32--ia32":
 			"https://github.com/jpillora/chisel/releases/download/v1.5.2/chisel_1.5.2_windows_386.gz",
-		"win32-x64":
+		"win32--x64":
 			"https://github.com/jpillora/chisel/releases/download/v1.5.2/chisel_1.5.2_windows_amd64.gz",
 	};
 
