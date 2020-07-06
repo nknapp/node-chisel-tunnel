@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/nknapp/node-chisel-tunnel/compare/v1.0.1...v1.1.0) (2020-07-06)
+
+### Bug Fixes
+
+- move "fs-extra" to the normal dependencies
+  ([2b4f78a](https://github.com/nknapp/node-chisel-tunnel/commit/2b4f78a3c4812d84008330aceddfb2fe838fa2a7))
+
+### Features
+
+- add typings
+  ([224448d](https://github.com/nknapp/node-chisel-tunnel/commit/224448d196173b07e25ac8184d5d4dd3b0405106))
+
 ## [1.0.1](https://github.com/nknapp/node-chisel-tunnel/compare/v1.0.0...v1.0.1) (2020-07-06)
 
 ### Bug Fixes
