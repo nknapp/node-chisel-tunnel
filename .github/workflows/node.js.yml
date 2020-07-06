@@ -35,4 +35,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
+    - run: yarn prepare-fixtures
     - run: yarn test:coverage
