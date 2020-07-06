@@ -6,3 +6,4 @@ coverage/
 /tmp
 /testtmp
 /test/fixtures/chisel/1.5.2/
+/chisel-cache/
