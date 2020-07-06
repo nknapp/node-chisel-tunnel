@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/nknapp/node-chisel-tunnel/compare/v1.0.0...v1.0.1) (2020-07-06)
+
+### Bug Fixes
+
+- move "got" to the normal dependencies
+  ([288e2b6](https://github.com/nknapp/node-chisel-tunnel/commit/288e2b684c1964f2015f46bd2d77e9f03f57003a))
+
 # [1.0.0](https://github.com/nknapp/node-chisel-tunnel/compare/v0.2.0...v1.0.0) (2020-07-06)
 
 # [0.2.0](https://github.com/nknapp/node-chisel-tunnel/compare/v0.1.0...v0.2.0) (2020-07-06)
