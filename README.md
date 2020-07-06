@@ -1,6 +1,6 @@
 # chisel-tunnel
 
-[![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel)
+[![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel) ![Node.js CI](https://github.com/nknapp/node-chisel-tunnel/workflows/Node.js%20CI/badge.svg)
 
 > Download releases of jpillora/chisel, a tool to create tcp-tunnels.
 
@@ -51,24 +51,25 @@ chiselTunnel.downloadChisel("~1.5.0").then(filename => {
 This will generate the following output
 
 ```
-
+1.5.2
 ```
 
 # API reference
 
 <a name="downloadChisel"></a>
 
-## downloadChisel(semverRange, [userOptions]) ⇒ <code>Promise.&lt;\*&gt;</code>
+## downloadChisel(semverRange, [options]) ⇒ <code>Promise.&lt;string&gt;</code>
 
-Download and
+Download chisel for a given range of versions
 
-**Kind**: global function
+**Kind**: global function  
+**Returns**: <code>Promise.&lt;string&gt;</code> - the downloaded chisel executable
 
-| Param                | Type                |
-| -------------------- | ------------------- |
-| semverRange          | <code>string</code> |
-| [userOptions]        | <code>object</code> |
-| [userOptions.tmpDir] | <code>string</code> |
+| Param              | Type                |
+| ------------------ | ------------------- |
+| semverRange        | <code>string</code> |
+| [options]          | <code>object</code> |
+| [options.cacheDir] | <code>string</code> |
 
 # License
 
