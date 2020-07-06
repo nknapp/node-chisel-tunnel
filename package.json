@@ -6,6 +6,16 @@
   "types": "types/index.d.ts",
   "license": "MIT",
   "private": false,
+  "funding": [
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GB656ZSAEQEXN&source=url"
+    },
+    {
+      "type": "liberapay",
+      "url": "https://liberapay.com/nils.knappmeier/donate"
+    }
+  ],
   "files": [
     "src/**/*.js",
     "src/**/*.json"

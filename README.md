@@ -1,6 +1,6 @@
 # chisel-tunnel
 
-[![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel) [![Node.js CI](https://github.com/nknapp/node-chisel-tunnel/workflows/Node.js%20CI/badge.svg)](https://github.com/nknapp/node-chisel-tunnel/actions?query=workflow%3A%22Node.js+CI%22)
+[![NPM version](https://img.shields.io/npm/v/chisel-tunnel.svg)](https://npmjs.com/package/chisel-tunnel) [![Node.js CI](https://github.com/nknapp/node-chisel-tunnel/workflows/Node.js%20CI/badge.svg)](https://github.com/nknapp/node-chisel-tunnel/actions?query=workflow%3A%22Node.js+CI%22) [![PayPal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GB656ZSAEQEXN&source=url) [![Liberapay](https://img.shields.io/badge/liberapay-donate-yellow.svg)](https://liberapay.com/nils.knappmeier/donate)
 
 > Download releases of jpillora/chisel, a tool to create tcp-tunnels.
 
