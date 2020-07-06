@@ -11,11 +11,11 @@
     "src/**/*.json"
   ],
   "scripts": {
-    "create-asset-lookup-file": "node prepare/create-asset-lookup-file.js",
+    "create-asset-lookup-file": "node build-scripts/create-asset-lookup-file.js",
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "pretest": "npm run lint && node ./test/prepare-fixtures.js",
+    "pretest": "npm run lint && node build-scripts/prepare-fixtures.js",
     "test": "npm run test:coverage --",
     "posttest": "npm run format",
     "format": "prettier --loglevel warn --write \"**/*.{js,ts,d.ts,css,md}\"",
@@ -54,7 +54,8 @@
   "jest": {
     "rootDir": ".",
     "testMatch": [
-      "**/src/**/*.test.js"
+      "**/src/**/*.test.js",
+      "**/build-scripts/**/*.test.js"
     ],
     "coverageThreshold": {
       "global": {

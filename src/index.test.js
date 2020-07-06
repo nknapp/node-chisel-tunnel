@@ -3,7 +3,7 @@ const fs = require("fs-extra");
 const cp = require("child_process");
 const path = require("path");
 const nock = require("nock");
-const { getChisel_1_5_2_executable } = require("../test/utils/chisel-fixtures");
+const { getChisel_1_5_2_executable } = require("../test-utils/utils/chisel-fixtures");
 
 const defaultCachedir = "chisel-cache";
 const {

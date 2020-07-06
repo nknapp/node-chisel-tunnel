@@ -1,2 +1,3 @@
 /src/**/*.test.js
-/test
+/build-scripts/**/*.test.js
+/test-utils

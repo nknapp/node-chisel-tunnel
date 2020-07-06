@@ -1,21 +1,21 @@
 module.exports = { uniqueIndexBy, arrayToObject };
 
 function uniqueIndexBy(array, keyFunction) {
-	const result = {};
-	array.forEach((item) => {
-		const key = keyFunction(item);
-		if (result[key] != null) {
-			throw new Error(`Duplicate key: ${key}`);
-		}
-		result[key] = item;
+	return arrayToObject(array, (item) => {
+		return {
+			key: keyFunction(item),
+			value: item,
+		};
 	});
-	return result;
 }
 
 function arrayToObject(array, mapToEntry) {
 	const result = {};
 	array.forEach((item) => {
 		const entry = mapToEntry(item);
+		if (result[entry.key] != null) {
+			throw new Error(`Duplicate key: ${entry.key}`);
+		}
 		result[entry.key] = entry.value;
 	});
 	return result;

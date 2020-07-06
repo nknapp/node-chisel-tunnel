@@ -1,5 +1,5 @@
 const { sha256 } = require("./file-operations");
-const fixtureFile = require.resolve("../../test/fixtures/fileHashTestFixture.txt");
+const fixtureFile = require.resolve("../../test-utils/fixtures/fileHashTestFixture.txt");
 
 describe("file-hash", () => {
 	it("should compute the sha256 hash of a file", async () => {

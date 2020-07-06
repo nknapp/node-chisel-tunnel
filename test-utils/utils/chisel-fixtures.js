@@ -62,16 +62,16 @@ function getChisel_1_5_2_executable() {
 			`Could not find value for key "${key}" in ${JSON.stringify(chisel_1_5_2_urls, null, 2)}`
 		);
 	}
-	return asChiselTestDetails(url);
+	return buildTestValuesForChiselUrl(url);
 }
 
 function getChisel_1_5_2_checksums() {
-	return asChiselTestDetails(
+	return buildTestValuesForChiselUrl(
 		"https://github.com/jpillora/chisel/releases/download/v1.5.2/chisel_1.5.2_checksums.txt"
 	);
 }
 
-function asChiselTestDetails(url) {
+function buildTestValuesForChiselUrl(url) {
 	const gzFilename = url.match(/[^/]+$/)[0];
 	const fixturePath = path.join(fixtureDirectory, gzFilename);
 	const executableName = gzFilename.replace(/\.gz$/, "");
