@@ -81,5 +81,8 @@
     }
   },
   "author": "Nils Knappmeier <npm@knappi.org>",
-  "repository": "git@github.com:nknapp/node-chisel-tunnel.git"
+  "repository": {
+    "type": "github",
+    "url": "git@github.com:nknapp/node-chisel-tunnel.git"
+  }
 }
