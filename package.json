@@ -69,7 +69,8 @@
     "rootDir": ".",
     "testMatch": [
       "**/src/**/*.test.js",
-      "**/build-scripts/**/*.test.js"
+      "**/build-scripts/**/*.test.js",
+      "**/test-utils/**/*.test.js"
     ],
     "coverageThreshold": {
       "global": {

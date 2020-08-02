@@ -4,6 +4,8 @@ const cp = require("child_process");
 const path = require("path");
 const nock = require("nock");
 const { getChisel_1_5_2_executable } = require("../test-utils/utils/chisel-fixtures");
+const { delay } = require("../test-utils/utils/delay");
+const { createTempfilename } = require("./lib/temp-files");
 
 const defaultCachedir = "chisel-cache";
 const {
@@ -17,13 +19,14 @@ const {
 describe("the chisel-tunnel", () => {
 	let nockMock;
 
+	const cacheDir = "test-tmp-index-test";
 	beforeEach(async () => {
 		nockMock = nock(urlOrigin)
 			.get(urlPath)
 			.reply(200, () => fs.createReadStream(fixturePath));
 
 		await fs.remove(defaultCachedir);
-		await fs.remove("testtmp");
+		await fs.remove(cacheDir);
 	});
 
 	afterEach(() => {
@@ -40,13 +43,45 @@ describe("the chisel-tunnel", () => {
 
 		it("to the specified custom temp-directory", async () => {
 			let filename = await chiselTunnel.downloadChisel("~1.5.0", {
-				cacheDir: "./testtmp",
+				cacheDir,
 			});
 
 			expectVersion1_5_2(filename);
 			expect(nockMock.isDone()).toBe(true);
-			expectToBeChisel_1_5_2_inDirectory(filename, "testtmp");
+			expectToBeChisel_1_5_2_inDirectory(filename, cacheDir);
 		});
+	});
+
+	it("removes old temp-files", async () => {
+		await fs.mkdirp(cacheDir);
+
+		const targetFilename = path.join(cacheDir, "test-file");
+		const tempFilename = createTempfilename(targetFilename);
+		await fs.writeFile(tempFilename, "test-data");
+		await fs.writeFile(targetFilename, "test-data");
+		await delay(500);
+		let filename = await chiselTunnel.downloadChisel("~1.5.0", {
+			cacheDir,
+			maxTempFileAgeMillis: 250,
+		});
+
+		expect(await fs.readdir(cacheDir)).toEqual([
+			path.basename(filename),
+			path.basename(filename) + ".gz",
+			"test-file",
+		]);
+	});
+
+	it("succeeds if tunnel is executed at the same time while downloading", async () => {
+		const filename = await chiselTunnel.downloadChisel("~1.5.0");
+		const secondDownloadPromise = chiselTunnel.downloadChisel("~1.5.0");
+		const server = cp.spawn(filename, ["server", "-p", "8123"]);
+		try {
+			await delay(500);
+		} finally {
+			server.kill("SIGKILL");
+		}
+		await secondDownloadPromise;
 	});
 
 	it("if a valid file exists in the cache, it should not be downloaded again", async () => {

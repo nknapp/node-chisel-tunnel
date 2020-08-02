@@ -1,3 +1,5 @@
 /src/**/*.test.js
 /build-scripts/**/*.test.js
 /test-utils
+/test-tmp
+/test-tmp-index-test
