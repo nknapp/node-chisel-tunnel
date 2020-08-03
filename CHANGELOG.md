@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/nknapp/node-chisel-tunnel/compare/v1.1.0...v1.2.0) (2020-08-03)
+
+### Features
+
+- atomic downloads
+  ([8c5b7e6](https://github.com/nknapp/node-chisel-tunnel/commit/8c5b7e6a361773456f97034d8d909bc1de8fc939))
+
 # [1.1.0](https://github.com/nknapp/node-chisel-tunnel/compare/v1.0.1...v1.1.0) (2020-07-06)
 
 ### Bug Fixes

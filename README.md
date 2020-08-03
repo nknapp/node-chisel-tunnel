@@ -78,11 +78,12 @@ Download chisel for a given range of versions
 **Returns**: <code>Promise.&lt;string&gt;</code> - the downloaded
 chisel executable
 
-| Param              | Type                |
-| ------------------ | ------------------- |
-| semverRange        | <code>string</code> |
-| [options]          | <code>object</code> |
-| [options.cacheDir] | <code>string</code> |
+| Param                          | Type                | Description                                                    |
+| ------------------------------ | ------------------- | -------------------------------------------------------------- |
+| semverRange                    | <code>string</code> |                                                                |
+| [options]                      | <code>object</code> |                                                                |
+| [options.cacheDir]             | <code>string</code> |                                                                |
+| [options.maxTempFileAgeMillis] | <code>number</code> | remove temp-files when they are older than this age in millis. |
 
 # License
 
